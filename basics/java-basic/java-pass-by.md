@@ -158,6 +158,8 @@ public static void main(String[] args) {
 
 public void pass(User user) {
   user = new User();
+  //其实这里new（）对象是实际上给这个传进来的user的值分配一块新的内存空间，也就是一个内存地址，但是这块内存的对象的名字和主函数中的对象的名字虽然
+  //一样，但是，他们的内存区域不同，他们分别生成在两个不同的方法区
   user.setName("hollischuang");
   user.setGender("Male");
   System.out.println("print in pass , user is " + user);
